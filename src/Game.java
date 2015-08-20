@@ -1,5 +1,7 @@
+import java.util.Scanner;
 
 public class Game {
+    Scanner scanner = new Scanner(System.in);
 
     Player player;
 
@@ -8,16 +10,16 @@ public class Game {
     }
 
     public void startGame() {
-        System.out.println("Player's name " + player.name);
-        System.out.println("Player's age " + player.age);
+        System.out.println("What do you want to name your player?");
 
-        player.name = "Ryan";
+        player.name = scanner.nextLine();
 
-        System.out.println("Player's name is now " + player.name);
+        System.out.println("Your players name is " + player.name);
+        System.out.println("What age do you want your character to be?");
 
-        player.age = 35;
+        player.age = scanner.nextInt();
 
-        System.out.println("Player's age is now " + player.age);
+        System.out.println("Your characters age is " + player.age);
     }
 
     public static void main(String[] args) {
